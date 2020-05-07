@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dc-tennis/static/css/main.89a3cb01.chunk.css",
+    "main.js": "/dc-tennis/static/js/main.4c046360.chunk.js",
+    "main.js.map": "/dc-tennis/static/js/main.4c046360.chunk.js.map",
+    "runtime-main.js": "/dc-tennis/static/js/runtime-main.aee6a348.js",
+    "runtime-main.js.map": "/dc-tennis/static/js/runtime-main.aee6a348.js.map",
+    "static/js/2.eaf3f496.chunk.js": "/dc-tennis/static/js/2.eaf3f496.chunk.js",
+    "static/js/2.eaf3f496.chunk.js.map": "/dc-tennis/static/js/2.eaf3f496.chunk.js.map",
+    "index.html": "/dc-tennis/index.html",
+    "precache-manifest.572271ab563c3a82c1930a6d145eab82.js": "/dc-tennis/precache-manifest.572271ab563c3a82c1930a6d145eab82.js",
+    "service-worker.js": "/dc-tennis/service-worker.js",
+    "static/css/main.89a3cb01.chunk.css.map": "/dc-tennis/static/css/main.89a3cb01.chunk.css.map",
+    "static/js/2.eaf3f496.chunk.js.LICENSE.txt": "/dc-tennis/static/js/2.eaf3f496.chunk.js.LICENSE.txt",
+    "static/media/tennis.svg": "/dc-tennis/static/media/tennis.af9b144e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aee6a348.js",
+    "static/js/2.eaf3f496.chunk.js",
+    "static/css/main.89a3cb01.chunk.css",
+    "static/js/main.4c046360.chunk.js"
+  ]
+}
