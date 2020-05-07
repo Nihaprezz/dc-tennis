@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactMapGL, { Marker } from "react-map-gl"
+import ReactMapGL, { Marker, Popup } from "react-map-gl"
 import * as tennisData from "./data/tennis-courts.json"
 import tennisIcon from "./tennis.svg"
 
@@ -14,9 +14,15 @@ function App() {
     zoom: 11
   })
 
+  const [currentCourt, setCurrentCourt] = useState(null)
+
+  const handleSelect = (court) => {
+    setCurrentCourt(court)
+  }
+
   return (
     <div className="App">
-      <h1>DC Tennis Locations</h1>
+      <h1>DC Tennis</h1>
 
       <ReactMapGL {...viewport} mapboxApiAccessToken={apiKey}
       mapStyle="mapbox://styles/nihaprezz/ck9w5z0yu05111intcxb0x1v2"
@@ -28,13 +34,29 @@ function App() {
             latitude={court.geometry.y}
             longitude={court.geometry.x}>
 
-            <button className="marker-btn">
+            <button className="marker-btn" onClick={() => handleSelect(court)}>
               <img src={tennisIcon} alt="Tennis Icon"/>
             </button>
 
           </Marker>
           )
         })}
+
+        {currentCourt ? (
+          <Popup 
+          latitude={currentCourt.geometry.y}
+          longitude={currentCourt.geometry.x}
+          onClose={() => {
+            setCurrentCourt(null);
+          }}>
+            <div>
+              <p>{currentCourt.attributes.NAME}</p>
+              <p>{`Condition: ${currentCourt.attributes.CONDITION}`}</p>
+              <p>{`Surface: ${currentCourt.attributes.SURFACE}`}</p>
+
+            </div>
+          </Popup>
+        ): null}
 
       </ReactMapGL>
 
